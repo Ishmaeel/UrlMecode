@@ -5,21 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:UrlMecode"
         mc:Ignorable="d"
-        Title="The Sevalator"
+        Title="UrlMecode"
         Width="1200"
         SizeToContent="Height"
         Height="Auto"
         WindowStyle="ToolWindow">
     <StackPanel>
-        <TextBox Text="{Binding Input, UpdateSourceTrigger=PropertyChanged}"
+        <TextBox Text="{Binding Decoded, UpdateSourceTrigger=PropertyChanged}"
                  Margin="5" />
-        <TextBox Text="{Binding EncodedOutput}"
-                 IsReadOnly="True"
-                 Background="AliceBlue"
-                 Margin="5" />
-        <TextBox Text="{Binding DecodedOutput}"
-                 IsReadOnly="True"
-                 Background="AliceBlue"
+        <TextBox Text="{Binding Encoded, UpdateSourceTrigger=PropertyChanged}"
                  Margin="5" />
     </StackPanel>
 </Window>

@@ -11,9 +11,11 @@
         Height="Auto"
         WindowStyle="ToolWindow">
     <StackPanel>
-        <TextBox Text="{Binding Decoded, UpdateSourceTrigger=PropertyChanged}"
+        <TextBox Text="{Binding Input, UpdateSourceTrigger=PropertyChanged}"
                  Margin="5" />
         <TextBox Text="{Binding Encoded, UpdateSourceTrigger=PropertyChanged}"
+                 Margin="5" />
+        <TextBox Text="{Binding Decoded, UpdateSourceTrigger=PropertyChanged}"
                  Margin="5" />
     </StackPanel>
 </Window>

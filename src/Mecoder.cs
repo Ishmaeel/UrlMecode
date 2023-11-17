@@ -4,10 +4,26 @@ namespace UrlMecode
 {
     internal class Mecoder : INotifyPropertyChanged
     {
+        private string _Input;
         private string _Encoded;
         private string _Decoded;
 
         public event PropertyChangedEventHandler PropertyChanged;
+
+        public string Input
+        {
+            get { return _Input; }
+            set
+            {
+                _Input = value;
+
+                _Decoded = System.Web.HttpUtility.UrlDecode(_Input);
+                _Encoded = System.Web.HttpUtility.UrlEncode(_Input);
+
+                RaiseChangedEvent("Encoded");
+                RaiseChangedEvent("Decoded");
+            }
+        }
 
         public string Decoded
         {

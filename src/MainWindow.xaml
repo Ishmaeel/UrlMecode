@@ -8,14 +8,13 @@
         Title="UrlMecode"
         Width="1200"
         SizeToContent="Height"
-        Height="Auto"
-        WindowStyle="ToolWindow">
+        Height="Auto" Icon="/Expand.ico">
     <StackPanel>
         <TextBox Text="{Binding Input, UpdateSourceTrigger=PropertyChanged}"
                  Margin="5" />
         <TextBox Text="{Binding Encoded, UpdateSourceTrigger=PropertyChanged}"
-                 Margin="5" />
+                 Margin="5" IsReadOnly="True" />
         <TextBox Text="{Binding Decoded, UpdateSourceTrigger=PropertyChanged}"
-                 Margin="5" />
+                 Margin="5" IsReadOnly="True" />
     </StackPanel>
 </Window>
